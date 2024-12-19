@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.hero-section {
+  background-color: #f8f9fa;
+  padding: 60px 0;
+  min-height: 100vh; /* Set full screen height */
+  display: flex;
+  align-items: center; /* Center vertically */
+}
+.program-section {
+  background-color: #fff9ed;
+  padding: 60px 0;
+}
+.project-section {
+  padding: 60px 0;
+}
+.cta-section {
+  background-color: #fff9ed;
+  padding: 40px 0;
+  text-align: center;
+}
+.faq-section {
+  padding: 60px 0;
+}
+footer {
+  background-color: #f8d67b;
+  padding: 20px 0;
+}
+footer a {
+  color: #000;
+  text-decoration: none;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.main-head {
+  width: 100%;
+  height: 54px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 9999;
+  transition: all 0.3s ease; /* Untuk transisi mulus */
+}
+
+.main-head.sticky {
+  position: fixed;
+  background: #fff;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  animation: slidedown 0.5s forwards;
+  -webkit-animation: slidedown 0.5s forwards;
+}
+.main-head.slidedown {
+  position: fixed;
+}
+
+@keyframes slidedown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.judul {
+  font-size: 2rem;
+  opacity: 0; /* Default: hide element */
+  transition: opacity 1s ease-in-out; /* Basic opacity transition */
+}
+
+.judul.visible {
+  opacity: 1; /* Fade-in effect when element is visible */
+}
