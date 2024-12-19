@@ -1,6 +1,9 @@
 body {
   font-family: Arial, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 .hero-section {
   background-color: #f8f9fa;
   padding: 60px 0;
@@ -8,11 +11,22 @@ body {
   display: flex;
   align-items: center; /* Center vertically */
 }
+.about-section {
+  min-height: 20vh;
+  background-color: #f8d67b;
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+}
 .program-section {
-  background-color: #fff9ed;
+  background-color: #f8f9fa;
   padding: 60px 0;
 }
 .project-section {
+  padding: 60px 0;
+}
+.statistic-section {
+  background-color: #f8d67b;
   padding: 60px 0;
 }
 .cta-section {
@@ -85,4 +99,19 @@ footer a {
 
 .judul.visible {
   opacity: 1; /* Fade-in effect when element is visible */
+}
+
+.zoomIn {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.zoomIn.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.bg-warning-custom {
+  background-color: #f7dc6f;
 }
